@@ -10,4 +10,6 @@ router.get("/message/new", homeController.message_new_get);
 
 router.post("/message/new", homeController.message_new_post);
 
+router.get("/message/:id", homeController.message_get);
+
 module.exports = router;

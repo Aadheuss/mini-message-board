@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('./head', {title: title}) %>
+  <body>
+    <%-include("./nav") %>
+    <% if (locals.message){ %>
+    <p><%= message.user %></p>
+    <p><%= message.text %></p>
+    <p><%= message.date %></p>
+    <% } else{ %>  
+    <p>No message found</>
+    <% } %>
+  </body>
+</html>

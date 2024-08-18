@@ -14,3 +14,11 @@ exports.message_new_post = (req, res) => {
   messages.push({ text: text, user: user, added: new Date() });
   res.redirect("/messages");
 };
+
+exports.message_get = (req, res) => {
+  const message = messages.find((msg, index) => {
+    return index === Number(req.params.id);
+  });
+
+  res.render("message", { title: "Mini Message Board", message });
+};
