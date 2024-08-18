@@ -2,6 +2,7 @@
 <html lang="en">
 <%- include("./head", {title: title}) %>
   <body>
+    <%- include("./nav") %>
     <form method="POST" action="/message/new">
     <label for="user"> User
       <input type="text" id="user" name="user" required>
