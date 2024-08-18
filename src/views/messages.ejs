@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('./head', {title: "Mini message board"}) %>
+  <body>
+    <h1>Mini Message Board</h1>
+    <ul>
+      <h2>Messages</h2>
+      <%if (locals.messages) { %>
+       <% messages.map(msg => { %>
+      <li>
+        <p> <%= msg.user %> </p>
+        <p> <%= msg.text %> </p>
+        <p> <%= msg.date %></p>
+      </li>
+      <%})%> 
+      <%} else {%>
+      <li>No message yet</li>
+      <%}%>
+    </ul>
+  </body>
+</html>
