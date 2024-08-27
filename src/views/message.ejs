@@ -4,9 +4,9 @@
   <body>
     <%-include("./nav") %>
     <% if (locals.message){ %>
-    <p><%= message.user %></p>
-    <p><%= message.text %></p>
-    <p><%= message.date %></p>
+    <p><%= message.username %></p>
+    <p><%= message.message %></p>
+    <p><%= message.added %></p>
     <% } else{ %>  
     <p>No message found</>
     <% } %>
